@@ -1,16 +1,14 @@
-import ContactContainer from '@/ui/components/contact/contact.container'
+import AccueilContainer from '@/ui/components/accueil/accueil.container'
 import Layout from '@/ui/components/layout/layout'
-import Footer from '@/ui/components/navigation/footer'
 import Seo from '@/ui/components/seo/seo'
 import React from 'react'
 
 export default function Home() {
   return (
     <>
-      <Seo description='ParisFoot' title='Site de paris'/>
-      <Layout className='bg-gray'>
-        <ContactContainer/>
-        <Footer/>
+      <Seo description='Site de paris' title='ParisFoot'/>
+      <Layout isDisplayCreadCrumbs={false} className='bg-gray'>
+        <AccueilContainer/>
       </Layout>
     </>
   )

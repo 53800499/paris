@@ -3,11 +3,12 @@
 import Button from "@/ui/designSystem/button/button";
 import Typography from "@/ui/designSystem/typography/typography";
 import React from "react";
+import Container from "../container/container";
 
 export default function ContactView() {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-      <div className="flex flex-col justify-center space-y-4 py-24">
+    <Container className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+      <div className="flex flex-col justify-center space-y-4 py-8 lg:py-24">
         <Typography variant="h4">
           La communauté{" "}
           <span className="text-primary">
@@ -26,6 +27,6 @@ export default function ContactView() {
         </div>
       </div>
       <div></div>
-    </div>
+    </Container>
   );
 }

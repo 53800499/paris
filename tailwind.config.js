@@ -76,12 +76,14 @@ module.exports = {
         DEFAULT: "#2AB691",
         600: "#26a482"
       },
+      grad: "#b2b2b2",
       gray: {
         400: "#f2f2f22",
         500: "#cfde5e5e50f6",
         600: "#b2b2b2",
         700: "#808080",
         800: "#333333",
+        900: "#EFEDEDFF",
         DEFAULT: "#1D1D1D"
       }
     },

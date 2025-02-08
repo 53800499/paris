@@ -10,6 +10,7 @@ export default function Seo({ description, title }: Props) {
     <Head >
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/assets/images/logo.png" sizes="32x32" />
         <title>{title}</title>
     </Head>
   )

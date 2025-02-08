@@ -9,6 +9,7 @@ import ActiveLink from "./active-link";
 import { FooterLink } from "@/types/app-links";
 import { LinkType } from "@/lib/link-type";
 import Link from "next/link";
+import { RiShieldCheckFill } from "react-icons/ri";
 //import Avatar from "@/ui/designSystem/avatar/avatar";
 
 export default function Footer() {
@@ -20,19 +21,35 @@ export default function Footer() {
   ));
 
   return (
-    <div>
-      <hr className="w-full border-gray-4" />
-      <Container className="grid grid-cols-3 justify-between pt-4 space-y-4 md:space-y-0">
+    <div className="py-10 bg-gray">
+      <Container className="grid grid-cols-1 sm:grid-cols-2 justify-between pt-4 space-y-4 md:space-y-0 sm:space-x-8">
         <div className="flex flex-col space-y-4  me-2 ">
           <Link href="/">
-            <Typography variant="h2" className="mb-6" >ParisFoot</Typography>
+            <Typography
+              variant="h2"
+              theme="white"
+              className="flex items-center gap-3"
+            >
+              <div>
+                <RiShieldCheckFill />
+              </div>{" "}
+              <div>ParisFoot</div>
+            </Typography>
           </Link>
-          <Typography variant="caption1"  className="mt-2">
-            Parieurs Foot est un média de conseil en paris football accessible à toutes personnes majeures. Nous proposons chaque jour du contenu, des analyses et des pronostics pour vous aider à prendre les meilleures décisions dans les paris football. Notre équipe vous accompagne 5j/7, de 9h à 19H.
+          <Typography variant="caption1" className="mt-5">
+            Parieurs Foot est un média de conseil en paris football accessible à
+            toutes personnes majeures. Nous proposons chaque jour du contenu,
+            des analyses et des pronostics pour vous aider à prendre les
+            meilleures décisions dans les paris football. Notre équipe vous
+            accompagne 5j/7, de 9h à 19H.
           </Typography>
         </div>
-        {footNavigationList}
-        
+        <div className="grid grid-cols-2 gap-4">{footNavigationList}</div>
+      </Container>
+      <Container className="space-y-11 pb-4 pt-4">
+        <Typography variant="caption1" theme="white" className="text-center">
+          {`Copyright © ${new Date().getFullYear()} eskay_dev`}
+        </Typography>
       </Container>
 
       {/* <Container className="space-y-11 pb-2 pt-2">
@@ -70,7 +87,7 @@ interface footerLinkProps {
 
 const FooterLinks = ({ data }: footerLinkProps) => {
   const linksList = data.links.map((link) => (
-    <div key={uuidv4()} className="mb-2 md:mb-4 grid-row">
+    <div key={uuidv4()} className="mb-1 md:mb-4 grid-row">
       {link.type === LinkType.INTERNAL && (
         <ActiveLink href={link.baseUrl}>{link.label}</ActiveLink>
       )}
@@ -84,7 +101,12 @@ const FooterLinks = ({ data }: footerLinkProps) => {
 
   return (
     <div className="">
-      <Typography theme="primary" variant="h4" weight="medium" className="mb-14">
+      <Typography
+        theme="primary"
+        variant="h4"
+        weight="medium"
+        className="mb-4 lg:mb-7"
+      >
         {data.label}
       </Typography>
       <Typography theme="white" variant="caption1" className="">

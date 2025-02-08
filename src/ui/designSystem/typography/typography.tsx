@@ -21,7 +21,7 @@ interface Props {
     | "caption3"
     | "caption4";
   component?: "h1" | "h2" | "h3" | "h4" | "h5" | "div" | "p" | "span";
-  theme?: "black" | "white" | "gray" | "primary" | "secondary";
+  theme?: "black" | "white" | "gray" | "primary" | "secondary"| "grad";
   weight?: "regular" | "medium" | "bold";
   className?: string;
   children: React.ReactNode;
@@ -42,7 +42,7 @@ export default function Typography({
     h2: "text-4xl lg:text-6xl",
     h3: "text-3xl lg:text-5xl",
     h4: "text-2xl lg:text-4xl",
-    h5: "text-xl lg:text-3xl",
+    h5: "text-xl lg:text-2xl",
     lead: "text-2xl lg:text-xl",
     "body-lg": "text-lg lg:text-xl",
     body: "text-base lg:text-lg",
@@ -61,6 +61,7 @@ export default function Typography({
     white: "text-white",
     primary: "text-primary",
     secondary: "text-secondary",
+    grad: "text-gray-600",
   };
 
   return (
