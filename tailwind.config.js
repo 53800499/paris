@@ -84,12 +84,22 @@ module.exports = {
         700: "#808080",
         800: "#333333",
         900: "#EFEDEDFF",
-        DEFAULT: "#1D1D1D"
+        DEFAULT: "#000000"
       }
     },
     borderRadius: {
       DEFAULT: "10px",
       full: "9999px"
+    },
+    
+    screens: {
+      mb: "439px",
+      sm: "700px",
+      md: "768px",
+      custom: "900px", // Nouveau breakpoint
+      lg: "1146px",
+      xl: "1280px",
+      "2xl": "1536px"
     },
     extend: {}
   },

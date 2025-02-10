@@ -24,9 +24,17 @@ export default function Avatar({ size = "medium", src, alt, className }: Props) 
   }
   return (
     <div className={clsx(sizeStyles,className, 'bg-gray-400 relative')}>
-      <Image
+      {/* <Image
       fill src={src} alt={alt} className="object-center "
-      />
+      /> */}
+      <Image
+            src={src}
+            alt={alt}
+            width={150} // Valeur à adapter
+            height={90} // Valeur à adapter
+            objectFit="cover"
+            className="hover:scale-105 transition-transform rounded duration-500"
+          />
     </div>
   );
 }

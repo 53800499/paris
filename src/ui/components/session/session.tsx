@@ -14,6 +14,8 @@ interface Props {
 export default function Session({ children, sessionStatus }: Props) {
   const route = useRouter();
   const { authUserIsLoading, authUser } = useAuth();
+  console.log(authUser);
+  console.log(authUserIsLoading);
 
   if( sessionStatus === GUEST && !authUserIsLoading ) {
     if (!authUser) {
@@ -29,7 +31,7 @@ export default function Session({ children, sessionStatus }: Props) {
       route.push("/connexion");
     }
   }
-  if (!sessionStatus && authUserIsLoading) {
+  if (!sessionStatus && !authUserIsLoading) {
     return <>{children}</>;
   }
   return <SpinnerScreen />;

@@ -33,7 +33,7 @@ export const Input = <T extends FieldValues>({
   return (
     <div className="space-y-2 w-full">
       <label htmlFor={id as string} className="text-sm text-gray-700">
-        {placeholder}
+        <Typography theme="gray">{placeholder}</Typography>
       </label>
       <input
         id={id as string}

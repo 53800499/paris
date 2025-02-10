@@ -3,7 +3,7 @@
 import { FooterLink } from "@/types/app-links";
 import { AppLinks } from "@/types/app-links";
 
-export const footerApplicationLinks: AppLinks[] = [
+/* export const footerApplicationLinks: AppLinks[] = [
   {
     label: "Option de payement",
     baseUrl: "https://www.paypal.com",
@@ -24,7 +24,7 @@ export const footerApplicationLinks: AppLinks[] = [
     baseUrl: "/#",
     type: "internal"
   }
-];
+]; */
 export const footerApplicationUsers: AppLinks[] = [
   {
     label: "Mon compte",
@@ -52,11 +52,11 @@ export const footerLinks: FooterLink[] = [
   {
     label: "Liens util",
     links: footerApplicationUsers
-  },
+  },/* 
   {
     label: "Contacts",
     links: footerApplicationLinks
-  }
+  } */
 ];
 export const navMenus = [
   

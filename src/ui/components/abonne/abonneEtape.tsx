@@ -44,77 +44,78 @@ export default function AbonneEtape() {
         <div>
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="grid grid-cols-1 lg:grid-cols-3 gap-8"
-          ><object data="" type=""></object>
-            <div className="col-span-2  space-y-10">
-              <div className="bg-white p-8 rounded">
+            className="grid grid-cols-1 sm:grid-cols-3 sm:gap-8 mt-8"
+          >
+            <div className="col-span-2 mb-10 sm:mb-auto space-y-10">
+              <div className="bg-white p-4 md:p-8 rounded">
                 <Typography variant="h4" theme="gray">
                   1 - Choisissez votre{" "}
                   <span className="text-primary">FORMULE</span>
                 </Typography>
                 <Typography theme="gray" className="pt-4">
-                  <div className="flex justify-between items-center">
+                  <div className="lg:justify-between items-center hidden lg:flex">
                     <div>Formule</div>
                     <div>Prix</div>
                   </div>
-                  <hr className="text-gray" />
+                  <hr className="text-gray hidden lg:block" />
                   <div className="my-4">
                     <label
                       htmlFor="troisJours"
-                      className="flex justify-between items-center my-4"
+                      className="grid grid-cols-1 mb:grid-cols-3 items-center my-4"
                     >
                       <div className="flex items-center gap-4">
                         <input type="radio" name="boutton" id="troisJours" />
-                        <div>Formule decouverte</div>
+                        <div className="font-bold sm:font-normal">Formule decouverte</div>
                       </div>
-                      <div>3 jours d{"'"}accès depronostic*</div>
-                      <div>1.00 €</div>
+                      <div className="text-center sm:text-right">3 jours d{"'"}accès depronostic*</div>
+                      <div className="text-center sm:text-right">1.00 €</div>
                     </label>
                     <label
                       htmlFor="unMois"
-                      className="flex justify-between items-center my-4"
+                      className="grid grid-cols-1 sm:grid-cols-3 items-center my-4"
                     >
                       <div className="flex items-center gap-4">
                         <input type="radio" name="boutton" id="unMois" />
-                        <div>Formule 1 mois</div>
+                        <div className="font-bold sm:font-normal">Formule 1 mois</div>
                       </div>
-                      <div>39 €</div>
+                        <div></div>
+                      <div className="text-center sm:text-right">39 €</div>
                     </label>
                     <label
                       htmlFor="troisMois"
-                      className="flex justify-between items-center my-4"
+                      className="grid grid-cols-1 mb:grid-cols-3 items-center my-4"
                     >
                       <div className="flex items-center gap-4">
                         <input type="radio" name="boutton" id="troisMois" />
-                        <div>Formule 3 mois</div>
+                        <div className="font-bold sm:font-normal">Formule 3 mois</div>
                       </div>
-                      <div>
+                      <div className="text-center sm:text-right">
                         39 € * 3 = <span className="line-through">117 €</span>{" "}
                       </div>
-                      <div>79 €</div>
+                      <div className="text-center sm:text-right">79 €</div>
                     </label>
                     <label
                       htmlFor="sixMois"
-                      className="flex justify-between items-center my-4"
+                      className="grid grid-cols-1 mb:grid-cols-3 items-center my-4"
                     >
                       <div className="flex items-center gap-4">
                         <input type="radio" name="boutton" id="sixMois" />
-                        <div>Formule 6 mois</div>
+                        <div className="font-bold sm:font-normal">Formule 6 mois</div>
                       </div>
-                      <div>
+                      <div className="text-center sm:text-right">
                         39 € * 6 = <span className="line-through">234 €</span>{" "}
                       </div>
-                      <div>159 €</div>
+                      <div className="text-center sm:text-right">159 €</div>
                     </label>
                   </div>
                 </Typography>
               </div>
-              <div className="bg-white p-8 rounded">
+              <div className="bg-white p-4 md:p-8 rounded">
                 <Typography variant="h4" theme="gray">
                   2 - Vos <span className="text-primary">coordonnées</span>
                 </Typography>
                 <Typography className="space-y-8 mt-4">
-                  <div className="flex items-center space-x-4 w-full">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 items-center sm:space-x-4 w-full">
                     <Input
                       isLoading={isLoading}
                       placeholder="Prenom"
@@ -162,18 +163,18 @@ export default function AbonneEtape() {
                   />
                 </Typography>
               </div>
-              <div className="bg-white p-8 rounded">
+              <div className="bg-white p-4 md:p-8 rounded">
                 <Typography variant="h4" theme="gray">
                   3 - Moyens de <span className="text-primary">paiement</span>
                 </Typography>
                 <Typography className="space-y-8 mt-4" theme="gray">
-                  <label htmlFor="sixMois" className="flex items-center my-4">
-                    <div className="flex items-center gap-4">
+                  <label htmlFor="sixMois" className="flex items-center my-2 sm:my-4">
+                    <div className="flex items-center sm:gap-4">
                       <input type="radio" name="boutton" id="sixMois" />
                       <div>Paiement par carte bancaire</div>
-                      <Avatar src="" alt="" />
-                      <Avatar src="" alt="" />
-                      <Avatar src="" alt="" />
+                      <Avatar src="/assets/images/visa1.png" alt="visa1" />
+                      <Avatar src="/assets/images/americanExpress.png" alt="americanExpress" className="py-4" />
+                      <Avatar src="/assets/images/mastercard.png" className="py-2" alt="mastercard" />
                     </div>
                   </label>
                   <Input
@@ -187,7 +188,7 @@ export default function AbonneEtape() {
                     required={true}
                     isAutoCompleted={false}
                   />
-                  <div className="flex items-center space-x-4 w-full">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 items-center sm:space-x-4 w-full">
                     <Input
                       isLoading={isLoading}
                       placeholders="MM/AA"
@@ -219,24 +220,25 @@ export default function AbonneEtape() {
                     l’engagement.
                   </Typography>
                 </Typography>
+                <div className="flex justify-center pt-10">
+                  <Button type="submit" className="min-w-1/3 rounded-full mx-auto">
+                    S{"'"}abonner
+                  </Button>
+                </div>
               </div>
-              <div className="flex justify-center">
-                <Button type="submit" className="w-1/3 rounded-full mx-auto">
-                  S{"'"}abonner
-                </Button>
-              </div>
-              <div className="flex justify-center bg-white rounded h-40 p-6">
-                <Typography theme="gray">Paiement sécurisé</Typography>
-                <div className="flex justify-center">
-                  <Avatar src="" alt="" size="large" />
-                  <Avatar src="" alt="" size="large" />
-                  <Avatar src="" alt="" size="large" />
-                  <Avatar src="" alt="" size="large" />
+              <div className="items-center justify-center bg-white rounded p-6">
+                <Typography theme="gray" className="text-center">Paiement sécurisé</Typography>
+                <div className="flex justify-center items-center pt-4">
+                  <Avatar src="/assets/images/visa.webp" alt="visa" size="large" />
+                  <Avatar src="/assets/images/mastercard.png" alt="mastercard" size="large" />
+                  <Avatar src="/assets/images/stripe.png" alt="stripe" size="large" />
+                  <Avatar src="/assets/images/americanExpress.png" alt="americanExpress" size="large" />
+                  <Avatar src="/assets/images/discover.png" alt="americanExpress" size="large" />
                 </div>
               </div>
             </div>
             <div className="w-full justify-center">
-              <div className="bg-white p-8 rounded">
+              <div className="bg-white p-4 md:p-8 rounded">
                 <Typography theme="gray">
                   Tu es à <span className="text-primary">1 min </span> d’accéder
                   à...
@@ -245,7 +247,7 @@ export default function AbonneEtape() {
                   Accès en illimité aux pronostics. Analyse en avant match,
                   pronos en direct, viens vivre une expérience esport unique !
                 </Typography>
-                <div className="flex items-center my-5 gap-6">
+                <div className="flex items-center my-5 gap-2 sm:gap-6">
                   <RiFootballFill className="text-primary text-5xl" />
                   <Typography variant="h4" theme="primary">
                     Pronostics Football
@@ -270,7 +272,7 @@ export default function AbonneEtape() {
                   </ul>
                 </Typography>
                 <hr className="text-white my-9" />
-                <div className="flex items-center my-5 gap-6">
+                <div className="flex items-center my-5 gap-2 sm:gap-6">
                   <RiFlashlightFill className="text-primary text-5xl" />
                   <Typography variant="h4" theme="primary">
                     Pronostics montantes
@@ -282,7 +284,7 @@ export default function AbonneEtape() {
                   équipe sélectionne pour vous les paliers les plus sûrs.
                 </Typography>
                 <hr className="text-white my-9" />
-                <div className="flex items-center my-5 gap-6">
+                <div className="flex items-center my-5 gap-2 sm:gap-6">
                   <RiCupFill className="text-primary text-5xl" />
                   <Typography variant="h4" theme="primary">
                     Jeux Concours
@@ -294,7 +296,7 @@ export default function AbonneEtape() {
                   exclusivement pour les membres payants de Parieurs Foot.
                 </Typography>
                 <hr className="text-white my-9" />
-                <div className="flex items-center my-5 gap-6">
+                <div className="flex items-center my-5 gap-2 sm:gap-6">
                   <RiTelegram2Fill className="text-primary text-5xl" />
                   <Typography variant="h4" theme="primary">
                     Groupe Telegram

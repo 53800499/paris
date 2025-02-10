@@ -10,6 +10,7 @@ import { FooterLink } from "@/types/app-links";
 import { LinkType } from "@/lib/link-type";
 import Link from "next/link";
 import { RiShieldCheckFill } from "react-icons/ri";
+import Avatar from "@/ui/designSystem/avatar/avatar";
 //import Avatar from "@/ui/designSystem/avatar/avatar";
 
 export default function Footer() {
@@ -22,7 +23,7 @@ export default function Footer() {
 
   return (
     <div className="py-10 bg-gray">
-      <Container className="grid grid-cols-1 sm:grid-cols-2 justify-between pt-4 space-y-4 md:space-y-0 sm:space-x-8">
+      <Container className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:grid-cols-3 justify-between pt-4 space-y-4 md:space-y-0 lg:space-x-8">
         <div className="flex flex-col space-y-4  me-2 ">
           <Link href="/">
             <Typography
@@ -44,7 +45,22 @@ export default function Footer() {
             accompagne 5j/7, de 9h à 19H.
           </Typography>
         </div>
-        <div className="grid grid-cols-2 gap-4">{footNavigationList}</div>
+        {footNavigationList}
+        <div>
+          <Typography
+            theme="primary"
+            variant="h4"
+            weight="medium"
+            className="mb-4 lg:mb-7"
+          >
+            Contacts
+          </Typography>
+          <Typography variant="caption1" className="mb-4">Envoyez un mail</Typography>
+          <div className="flex items-center gap-4 sm:gap-10 py-10">
+            <Avatar src="/assets/images/telgram.webp" alt="Logo" />
+            <Avatar src="/assets/images/facebook.jpg" alt="Logo" />
+          </div>
+        </div>
       </Container>
       <Container className="space-y-11 pb-4 pt-4">
         <Typography variant="caption1" theme="white" className="text-center">

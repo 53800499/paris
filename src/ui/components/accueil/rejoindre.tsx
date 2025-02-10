@@ -10,6 +10,7 @@ import {
   RiTelegram2Fill
 } from "react-icons/ri";
 import Button from "@/ui/designSystem/button/button";
+import Image from "next/image";
 
 export default function Rejoindre() {
   return (
@@ -18,9 +19,19 @@ export default function Rejoindre() {
         Rejoins la{" "}
         <span className="text-primary">communauté Parieurs Foot</span>{" "}
       </Typography>
-      <Container className="bg-gray py-2 lg:py-10 lg:mt-10 rounded grid grid-cols-1 md:grid-cols-2 gap-10">
-        <div></div>
-        <div>
+      <Container className="bg-gray lg:mt-10 rounded grid grid-cols-1 md:grid-cols-2 gap-10">
+        {/* Image qui prend toute la droite */}
+        <div className="relative w-full min-h-[500px]">
+          <Image
+            src="/assets/images/ecranParis2.pngo
+            "
+            alt="accueil"
+            width={900}
+            height={550}
+            className="object-cover absolute inset-0 w-full h-full hover:scale-105 transition-transform duration-500" 
+          />
+        </div>
+        <div className="lg:py-10 py-2">
           <Typography>
             Accès en illimité aux pronostics de Parieurs Foot. Pronostic avant
             match, réaction en live sur telegram, viens partager ta passion des
@@ -93,12 +104,16 @@ export default function Rejoindre() {
       </Container>
       <Container className="my-2 lg:my-20 grid grid-cols-1 md:grid-cols-3 gap-10">
         <div className="col-span-2">
-          <Typography variant="h4" theme="gray" >
+          <Typography variant="h4" theme="gray">
             Rejoins-nous <span className="text-primary">gratuitement</span> sur{" "}
             <span className="text-primary">Telegram</span>
           </Typography>
           <Typography theme="gray" className="my-8">
-            Ajoute-nous sur Telegram pour recevoir les alertes et être notifié quand les pronostics sont disponibles. Nous donnons aussi chaque jour les résultats des pronostics et si tu as de la chance quelques pronostics en live gratuits pour te convaincre de nous faire confiance !
+            Ajoute-nous sur Telegram pour recevoir les alertes et être notifié
+            quand les pronostics sont disponibles. Nous donnons aussi chaque
+            jour les résultats des pronostics et si tu as de la chance quelques
+            pronostics en live gratuits pour te convaincre de nous faire
+            confiance !
           </Typography>
           <div>
             <Button className="rounded">Rejoins Telegram</Button>

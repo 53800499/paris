@@ -4,9 +4,10 @@ import React, { useState } from "react";
 import LoginView from "./login.view";
 import { FormsType, LoginFormFieldsType } from "@/types/forms";
 import { SubmitHandler, useForm } from "react-hook-form";
+import { useRouter } from "next/router";
 import { toast } from "react-toastify";
 import { firebaseLoginUser } from "@/pages/api/authentification";
-import { useRouter } from "next/router";
+
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 interface Props {
   form: FormsType<LoginFormFieldsType>; // Le type du formulaire est défini ici
