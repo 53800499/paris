@@ -17,7 +17,7 @@ const init = {
 
 const authUserContext = createContext({
   authUser: init,
-  authUserIsLoading: false
+  authUserIsLoading: true
 });
 interface Props {
   children: React.ReactNode;
