@@ -13,14 +13,14 @@ export default function Temoignage() {
         {/* Card */}
         <div className='flex gap-4 justify-center mt-10'>
           <div>
-            <Image src="" alt="Ticket 2" width={100} height={100} />
+            <Image src="/assets/images/temoignage1.jpg" alt="Ticket 2" width={200} height={100} />
           </div>
           <div>
-            <Image src="" alt="Ticket 2" width={100} height={100} />
+            <Image src="/assets/images/temoignage1.jpg" alt="Ticket 2" width={200} height={100} />
           </div>
-          <div>
+          {/* <div>
             <Image src="" alt="Ticket 2" width={100} height={100} />
-          </div>
+          </div> */}
         </div>
       </Container>
     </div>

@@ -19,16 +19,15 @@ export default function Rejoindre() {
         Rejoins la{" "}
         <span className="text-primary">communauté Parieurs Foot</span>{" "}
       </Typography>
-      <Container className="bg-gray lg:mt-10 rounded grid grid-cols-1 md:grid-cols-2 gap-10">
+      <Container className="bg-gray lg:mt-10 rounded grid grid-cols-1 sm:grid-cols-2 relative overflow-hidden">
         {/* Image qui prend toute la droite */}
-        <div className="relative w-full min-h-[500px]">
+        <div className="relative w-full min-h-[500px] hidden sm:block">
           <Image
-            src="/assets/images/ecranParis2.pngo
-            "
+            src="/assets/images/ecranParis2.png"
             alt="accueil"
-            width={900}
+            width={1000}
             height={550}
-            className="object-cover absolute inset-0 w-full h-full hover:scale-105 transition-transform duration-500" 
+            className="object-cover absolute inset-0 w-full h-full left-[-50px] lg:left-[-100px] hover:scale-105 transition-transform duration-500" 
           />
         </div>
         <div className="lg:py-10 py-2">

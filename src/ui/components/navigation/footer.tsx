@@ -22,7 +22,7 @@ export default function Footer() {
   ));
 
   return (
-    <div className="py-10 bg-gray">
+    <div className="py-10 bg-gray p-4">
       <Container className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:grid-cols-3 justify-between pt-4 space-y-4 md:space-y-0 lg:space-x-8">
         <div className="flex flex-col space-y-4  me-2 ">
           <Link href="/">

@@ -8,8 +8,8 @@ import Image from "next/image";
 
 export default function ContactView() {
   return (
-    <Container className="grid grid-cols-1 sm:grid-cols-2 gap-4 overflow-hidden relative">
-      <div className="flex flex-col justify-center space-y-4 py-8 lg:py-24">
+    <Container className="grid grid-cols-1 sm:grid-cols-2 overflow-hidden relative p-4">
+      <div className="flex flex-col justify-center space-y-4 items-center">
         <Typography variant="h4">
           La communauté{" "}
           <span className="text-primary">
@@ -27,11 +27,11 @@ export default function ContactView() {
           <Button className="btn-primary rounded">S{"'"}inscrire maintenant</Button>
         </div>
       </div>
-      <div className="relative w-full">
+      <div className="relative w-full h-[500px] hidden sm:block">
         <Image
           src="/assets/images/accueil.png"
           alt="accueil"
-          width={700} // Augmente la largeur pour dépasser
+          width={800} // Augmente la largeur pour dépasser
           height={450}
           objectFit="cover"
           className="absolute right-[-50px] lg:right-[-100px] hover:scale-105 transition-transform duration-500"
