@@ -23,7 +23,7 @@ export default function Breadcrumbs({ className, nom }: Props) {
     <Link href={index > 0 ? `/${segments.slice(1, index + 1).join("/")}` : "/"}>
       <Typography
         variant="caption4"
-        component="span"
+        component="span" theme="gray"
         className={clsx(
           segment !== lastSegment ? "text-gray-600" : "text-gray",
           "capitalize hover:text-gray animate"

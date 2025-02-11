@@ -13,12 +13,12 @@ interface Props {
 }
 export default function LoginView({ form }: Props) {
   return (
-    <Container className="grid grid-cols-1  my-4 sm:grid-cols-2 sm:gap-2">
+    <Container className="grid grid-cols-1  my-4 sm:grid-cols-2 sm:gap-2 items-center">
       <div className="flex items-center hidden sm:flex">
         <div className="relative w-full h-[531px]">
           <Image
             fill
-            src="/assets/images/accueils.jpg"
+            src="/assets/images/connexion.jpg"
             alt="sikirou"
             className="object-center rounded objet-cover "
           />
@@ -27,11 +27,11 @@ export default function LoginView({ form }: Props) {
       <div className="flex items-center">
         <Box padding_y="py-4" padding_x="px-4">
           <div className="flex items-center justify-between">
-            <Typography variant="h5" component="h1" className="text-primary">
+            <Typography variant="h5" component="h1" theme="primary">
               Connexion
             </Typography>
-            <div className="flex flex-wrap items-center ml-4 gap-2 hidden m:flex">
-              <Typography variant="caption4" component="span" theme="gray">
+            <div className="flex flex-wrap items-center ml-4 gap-2">
+              <Typography variant="caption4" theme="grad" component="span">
                 Tu a déjà un compte
               </Typography>
               <Typography variant="caption4" component="span" theme="primary">
@@ -44,10 +44,10 @@ export default function LoginView({ form }: Props) {
           </div>
           <div className="flex flex-wrap justify-center items-center ml-4 gap-2">
             <Typography variant="caption4" component="span" theme="gray">
-              Tu a déjà un compte
+              Mots de passe oublié ?
             </Typography>
             <Typography variant="caption4" component="span" theme="primary">
-              <Link href="/connexion/inscription">Inscription</Link>
+              <Link href="/connexion/mots-de-passe-perdue">Inscription</Link>
             </Typography>
           </div>
         </Box>

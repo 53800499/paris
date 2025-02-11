@@ -27,10 +27,10 @@ export default function ForgetPasswordView({form}:Props) {
       <div className="flex items-center ">
         <Box padding_y="py-4" padding_x="px-4">
           <div className="flex items-center justify-between">
-            <Typography variant="h5" component="h1" className="text-primary">
+            <Typography variant="h5" component="h1" className="text-primary" theme="primary"> 
               Réinitialisez
             </Typography>
-            <div className="flex flex-wrap items-center ml-4 gap-2 hidden m:flex">
+            <div className="flex flex-wrap items-center ml-4 gap-2 hidden mb:flex">
               <Typography variant="caption4" component="span" theme="gray">
                 Tu a déjà un compte
               </Typography>

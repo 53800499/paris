@@ -22,7 +22,7 @@ export default function ForgetPasswordForm({form}:Props) {
           required={true}
           isAutoCompleted={false}
         />
-        <Button isLoading={isLoading} fullwidth type="submit">
+        <Button isLoading={isLoading} fullwidth type="submit" className='rounded'>
           Envoyer
         </Button>
       </form>

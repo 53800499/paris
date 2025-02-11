@@ -21,11 +21,11 @@ export default function RegisterView({ form }: Props) {
 
   return (
     <Container className="grid grid-cols-1 sm:grid-cols-2 gap-2 md:space-x-6 mb-2">
-      <div className="flex">
+      <div className="flex items-center justify-center">
         <div className="relative w-full h-[531px] hidden sm:flex">
           <Image
             fill
-            src="/assets/images/accueil.png"
+            src="/assets/images/inscription.jpg"
             alt="sikirou"
             className="object-center rounded objet-cover "
           />
@@ -34,10 +34,10 @@ export default function RegisterView({ form }: Props) {
       <div className="flex items-center">
         <Box padding_y="py-4" padding_x="px-4">
           <div className="flex justify-between">
-            <Typography variant="h5" component="h1" className="text-primary">
+            <Typography variant="h5" component="h1" theme="primary" className="text-primary">
               Inscription
             </Typography>
-            <div className="flex flex-wrap items-center ml-4 gap-2 hidden m:flex">
+            <div className="flex flex-wrap items-center ml-4 gap-2 hidden mb:flex">
               <Typography variant="caption4" component="span" theme="gray">
                 Tu a déjà un compte
               </Typography>

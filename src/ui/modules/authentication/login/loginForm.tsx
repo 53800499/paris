@@ -34,7 +34,7 @@ export default function LoginForm({ form }: Props) {
         required={true}
         isAutoCompleted={false}
       />
-      <Button isLoading={isLoading} fullwidth type="submit">
+      <Button isLoading={isLoading} fullwidth type="submit" className='rounded'>
         S{"'"}inscrire
       </Button>
     </form>

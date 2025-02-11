@@ -19,7 +19,7 @@ export default function RegisterForm({ form }: Props) {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className= "pt-8 pb-5 space-y-4">
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 mb:grid-cols-2 gap-4">
         <Input
         isLoading={isLoading}
         placeholder="Nom"
@@ -87,7 +87,7 @@ export default function RegisterForm({ form }: Props) {
         required={true}
         isAutoCompleted={false}
       />
-      <Button isLoading={isLoading} fullwidth type="submit">
+      <Button isLoading={isLoading} fullwidth type="submit" className='rounded'>
         S{"'"}inscrire
       </Button>
     </form>
